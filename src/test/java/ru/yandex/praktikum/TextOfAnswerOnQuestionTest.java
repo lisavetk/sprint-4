@@ -30,14 +30,14 @@ public class TextOfAnswerOnQuestionTest {
     @Parameterized.Parameters(name = "{index}: expected={0}, indexOfQuestions={1}")
     public static Object[][] getQuestions() {
         return new Object[][] {
-                {answerOne, 0},
-                {answerTwo, 1},
-                {answerThree, 2},
-                {answerFour, 3},
-                {answerFive, 4},
-                {answerSix, 5},
-                {answerSeven, 6},
-                {answerEight, 7},
+                {ANSWER_PRICE_HOW_PAY, 0},
+                {ANSWER_SEVERAL_SCOOTERS, 1},
+                {ANSWER_RENTAL_TIME, 2},
+                {ANSWER_SCOOTER_TODAY, 3},
+                {ANSWER_RETURN_TIME, 4},
+                {ANSWER_CHARGING_SCOOTER, 5},
+                {ANSWER_CANCEL_ODER, 6},
+                {ANSWER_DELIVERY_ACROSS_MKAD, 7},
         };
     }
 
@@ -68,14 +68,5 @@ public class TextOfAnswerOnQuestionTest {
     public void tearDown() {
         driver.quit();
     }
-
-
-   /* private void checkTextOfAnswer(HomePageLocators locators) {
-        new WebDriverWait(driver, Duration.ofSeconds(EnvConf.EXPLICIT_WAIT)).until(ExpectedConditions
-                .visibilityOfElementLocated(locators.getAnswer(indexOfQuestion)));
-        String actualAnswer = homePageLocators.getAnswerText(indexOfQuestion);
-        assertEquals("Неверный текст", expectedText, actualAnswer);
-    }*/
-
 
 }
